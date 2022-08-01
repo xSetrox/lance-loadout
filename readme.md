@@ -6,3 +6,6 @@ Plus, the "load loadout" list live-updates, so you don't need to restart the scr
 
 ## Install
 Drag everything except the readme.md and LICENSE.txt into your Lua Scripts folder. Done and done.
+
+## Installing/deleting loadouts  
+Look in Stand/Lua Scripts/store/lance_loadout. Either drag a .loadout file in there, or delete one. Don't touch the files that don't end in .loadout.
