@@ -242,7 +242,8 @@ load_list_actions = menu.list_action(menu.my_root(), "Load loadout", {"loadloado
     local wep_tbl = table.load(store_dir .. '/' .. value)
     for k,wep in pairs(wep_tbl) do
         menu.trigger_commands('getguns' .. format_weapon_name_for_stand(weapon_name_from_hash(wep.weapon)))
-        for k, l in pairs(wep.liveries) do 
+        WEAPON.SET_PED_WEAPON_TINT_INDEX(players.user_ped(), wep.weapon, wep.tint)
+        for k, l in pairs(wep.liveries) do
             WEAPON._SET_PED_WEAPON_LIVERY_COLOR(players.user_ped(), wep.weapon, l.livery, l.color)
         end
         for k, c in pairs(wep.components) do
