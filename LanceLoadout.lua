@@ -1,4 +1,13 @@
-util.require_natives("1660775568")
+natives_version = "1660775568"
+script_name = "LanceLoadout"
+util.require_natives(natives_version)
+
+if PED == nil then
+    util.show_corner_help("It looks like " .. script_name .. "'s required natives file did not load properly. This file should automatically get downloaded by Stand, so wait a bit and then try again. If the issue continues, try setting your computer's DNS to use Cloudflare's DNS servers (1.1.1.1 and 1.0.0.1).\nNatives file required: natives-" .. natives_version .. ".lua\nI've also highlighted the file that needs to be (properly) installed in your Stand :)")
+    menu.focus(menu.ref_by_path("Stand>Lua Scripts>Repository>natives-" .. natives_version))
+    util.stop_script()
+end
+
 
 store_dir = filesystem.store_dir() .. '\\lance_loadout\\'
 
